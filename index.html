@@ -1,171 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LabWork1-V5</title>
+    <title>Sport Complexes</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="container header">
-        <div class="container header_container">
-            <div class="header__menu">
-                <img src="images/menu-96.png" alt="Menu icon">
-            </div>
-            <nav class="top_nav">
-                <ul>
-                    <li class="header__nav-item">
-                        <a class="header__nav-link-main" href="#"><b>Home</b></a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a class="header__nav-link" href="#">Find a doctor</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a class="header__nav-link" href="#">Apps</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a class="header__nav-link" href="#">Testimonials</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a class="header__nav-link" href="#">About us</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="logo logo_top">
-                <div class="circle_bg top_circle_bg">
-                    <span class="letter">T</span>
-                </div>
-                <div class="articul">
-                    <h2>Trafalgar</h2>
-                </div>
-            </div>
-        </div>
-        <div class="container hero_our_app">
-            <div class="text">
-                <div class="title_1">
-                    <h1>Download our mobile apps</h1>
-                </div>
-                <div class="underscore_1"></div>
-                <div class="description">
-                    <p>Our dedicated patient engagement app and web portal allow you to access information
-                        instantaneously (no tedeous form,
-                        long calls, or administrative hassle) and securely
+    <div class="wrapper">
+        <header class ="container header">
+            <div class ="container header_container">
+                <nav id ="nav-links" class="header__nav">
+                    <ul>
+                        <li class="header__nav-item">
+                            <a class="header__nav-link-main" href="#">Sport complexes</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="create_page.html">Add complexes
+                            </a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="edit_page.html">Edit complexes
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
+
+        <section class="container manager">
+            <div class =" options">
+                <p class="Title">
+                    Manage sport complexes
+                </p>
+                <div class="counter">
+                    <p class="title">
+                        Count total attendance
                     </p>
+                    <button class="count_button" id="count">
+                        Count
+                    </button>
+                    <div class="counter_result">
+                        Total attendance: <span id="totalAttendance">0</span>
+                    </div>
                 </div>
-                <button id="download">Download<img src="images/arrow_donw.png" class="arrow" id="arrow_down_1"></button>
-            </div>
-            <div class="image">
-                <img src="images/vec-1.svg" id="first_image">
-            </div>
-            <div class="element_vector_top">
-                <img src="images/element.svg" alt="element1">
-            </div>
-        </div>
-    </header>
+                <form class = "finder">
+                    <input type="text" id="find_input" class="form-control" placeholder="Enter name of complex">
+                    <button id="find_button">
+                        Find
+                    </button>
 
-    <section class="container articles">
-        <div class="title_2_container">
-            <div class="title_2">
-                <h1>Check out our latest article</h1>
+                    <div id="result"></div>
+                </form>
+                <div class="sort_cont">
+                    <ul class = sort> Sort complex by: 
+                        <li class="sort_li"><button id="capacity__des">Capacity (descending)</button></li>
+                        <li class="sort_li"><button id="capacity__asc">Capacity (ascending)</button></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="underscore_2"></div>
-        <article class="articles_container">
-            <article class="article">
-                <img class="article-img-top" src="images/image 1.jpg" alt="Article image A1">
-                <div class="article-body">
-                    <h3 class="article-title AT-1">Disease detection, check up in the laboratory</h3>
-                    <p class="article-text article-1">In the case, the role of the health laboratory is
-                        very important to do a disease detection...</p>
-                    <a href="#" class="read">Read more <img src="images/arrow_right.png" class="arrow_right"></a>
-                </div>
-            </article>
-            <article class="article">
-                <img class="article-img-top" src="images/image 2.png" alt="Article image A2">
-                <div class="article-body">
-                    <h3 class="article-title AT-2">Herbal medicines that are safe for consumption</h3>
-                    <p class="article-text article-2">Herbal medicine is very widely used at this time because
-                        of its very good for your health...</p>
-                    <a href="#" class="read">Read more <img src="images/arrow_right.png" class="arrow_right"></a>
-                </div>
-            </article>
-            <article class="article">
-                <img class="article-img-top" src="images/image 3.png" alt="Article image A3">
-                <div class="article-body">
-                    <h3 class="article-title AT-3">Natural care for healthy facial skin</h3>
-                    <p class="article-text article-3">A healthy lifestyle should start from now and also for
-                        your skin health. There are some...</p>
-                    <a href="#" class="read">Read more <img src="images/arrow_right.png" class="arrow_right"></a>
-                </div>
-            </article>
-        </article>
-        <button id="view_all">View all</button>
-    </section>
 
-    <section class="container last_section">
-        <div class="bg_rew">
-            <div class="title_3">
-                <h1>What our customer are saing</h1>
-            </div>
-            <div class="underscore_3"></div>
-            <div class="rew_container">
-                <div class="photo_of_person">
-                    <img src="images/image 4.jpg" id="second_image">
+            <div class="complex-list">
+                <h3>Sport Complexes list</h3>
+                <div class=" complexs_selec">
+                    
                 </div>
-                <div class="container_about_person">
-                    <div class="name"><b>Edvart Newgate</b></div>
-                    <div class="description2">Founder Circle</div>
-                </div>
-                <p class="rew_text">"Our dedicated patient engagement app and web portal allow you to access information
-                    instantaneously (no tedous form, long
-                    calls, or administrative hassle) and securely"</p>
             </div>
-        </div>
-        <nav class="nav_page">
-            <a class="arrow_nav arrow_left">
-                <img src="images/arrow_left.svg">
-            </a>
-            <div class="circles_cont">
-                <div class="circle"></div>
-                <div class="circle no-act_circle"></div>
-                <div class="circle no-act_circle"></div>
-                <div class="circle no-act_circle"></div>
-            </div>
-            <a class="arrow_nav" href="#">
-                <img src="images/arrow_right.png">
-            </a>
-        </nav>
-    </section>
-
-    <footer class="container footer">
-        <div class="element_vector_bottom">
-            <img src="images/element2.png" alt="element2">
-        </div>
-        <div class="logo logo_bottom">
-            <div class="circle_bg bottom_circle_bg">
-                <span class="letter"><b>T</b></span>
-            </div>
-            <div class="articul2">
-                <h2>Trafalgar</h2>
-            </div>
-        </div>
-        <nav class="footer_nav">
-            <ul>
-                <li class="nav__footer-item1">
-                    <a class="footer__nav-link" href=""> Company</a>
-                </li>
-                <li class="nav__footer-item2">
-                    <a class="footer__nav-link" href="">Region</a>
-                </li>
-                <li class="nav__footer-item3">
-                    <a class="footer__nav-link" href=""> Help</a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
+            
+        </section>
+    </div>
+    <script src="js-file/main.js"></script>
 </body>
-
 </html>
